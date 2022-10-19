@@ -694,7 +694,7 @@ fill: var(--accent-color);
 }
 
 .box-mail {
-        margin-left: 93px;
+        margin-left: auto;
 }
 
 .frame {
@@ -706,6 +706,7 @@ fill: var(--accent-color);
         top: 2784px;
         margin-top: 20px;
         padding-left: 16px;
+        color:rgba(255, 255, 255, 0.6);
         
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -733,11 +734,14 @@ fill: var(--accent-color);
         border-radius: 4px;
         border: 0;
         color: var(--primary-white-color);
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
         letter-spacing: 0.06em;
+        gap: 10px;
 }
 
 .button-mail:hover,
@@ -755,12 +759,12 @@ fill: var(--accent-color);
         position: absolute;
    
 } */
-
+/* 
 .button-mail::after {
         content: '';
         background-image: url(.image/icons-svg#icon-send);
         margin-left: 12px;
-}
+} */
 
 /* Portfolio */
 
@@ -914,18 +918,19 @@ pointer-events: none;
 
 .modal {
     position: absolute;
+    /* width: 528px; */
+    height: 581px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    padding-top: 40px;    
+    transform: translate(-50%, -50%); 
     /* text-align: center; */
-    width: 528px;
-    height: 581px;
+    /* width: 528px;
+    height: 581px; */
     background: var(--primary-white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    margin-bottom: 12px;
+    padding: 40px;
+
 }
 
 .modal-title {
@@ -937,9 +942,7 @@ pointer-events: none;
         margin-bottom: 12px;
 }
 
-.modal-text {
-        padding: 40px;
-}
+
 
 .buttom-close {
     position: absolute;
@@ -976,6 +979,8 @@ pointer-events: none;
 
 .input-wrap {
         position: relative;
+        align-items: center;
+                justify-content: center;
 }
 
 .form-element input {
@@ -985,19 +990,46 @@ pointer-events: none;
         border-radius: 4px;
         width: 100%;
         outline: none;
+
 }
+
+
+.checkbox-accept {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--title-text-color);
+}
+
+
+.checkbox-test {
+        display: flex;
+        align-items: center;
+        
+}
+
+.form-element.last {
+        margin-bottom: 0;
+}
+
+
 
 .form-element input:focus,
 .form-element input:hover {
         border: 1px solid var(--accent-color);
         transition-duration: 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-element input:focus + svg,
 .form-element input:hover+svg {
 fill: var(--accent-color);
 }
+
 
 .name-element {
                 font-size: 12px;
@@ -1006,17 +1038,20 @@ fill: var(--accent-color);
                 color: var(--title-text-color);
 }
 
+
 .svg-form {
         position: absolute;
                 top: 50%;
                 left: 12px;
-                transform: translateX(-50% +50%);
+                transform: translateY(-50%);
                
+
 }
 
 .comments {
-                width: 448px;
+                /* width: 448px; */
                 height: 120px;
+                resize: none;
                 padding: 12px 16px;
                 font-size: 12px;
                 line-height: 1.17;
@@ -1026,7 +1061,9 @@ fill: var(--accent-color);
 }
  
 .send-btn {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 width: 200px;
                 height: 50px;
@@ -1035,9 +1072,12 @@ fill: var(--accent-color);
                 color: var(--primary-white-color);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
                 border-radius: 4px;
+                border: none;
                 font-weight: 700;
                 font-size: 16px;
+                letter-spacing: 0.06em;
                 cursor: pointer;
+                margin-top: 30px;
 }
 
 .send-btn:hover,
@@ -1058,4 +1098,15 @@ fill: var(--accent-color);
                 text-decoration: underline;
                 color: var(--accent-color);
                 margin-left: 7px;
+}
+
+
+.check-icon {
+                width: 16px;
+                height: 15px;
+                margin-right: 7px;
+                display: flex;
+                align-items: center;
+                border: 2px solid var(--primary-text-color);
+                border-radius: 2px;
 }
